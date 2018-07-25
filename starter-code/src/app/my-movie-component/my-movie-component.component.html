@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Room {{movie.room}} - {{movie.title}}</h1>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{movie.poster}}">
+    <div class="card-body">
+      <p class="card-text">Genre:</p>
+      <ul>
+        <li *ngFor="let genre of movie.genres">{{genre}}</li>
+      </ul>
+      <p class="card-text">Year:</p>
+      <p>{{movie.year}}</p>
+      <p class="card-text">Actors:</p>
+      <ul>
+        <li *ngFor="let actor of movie.actors">{{actor}}</li>
+      </ul>
+      <p class="card-text">Schedule:</p>
+      <ul>
+        <li *ngFor="let hour of movie.hours">{{hour}}</li>
+      </ul>
+      <p class="card-text">Synopsis:</p>
+      <p>{{movie.synopsis}}</p>
+      <a [routerLink]="['/']" class="btn btn-primary">Home</a>
+    </div>
+  </div>
+</div>
